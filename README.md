@@ -27,7 +27,12 @@ If you want to revert back to default behaviour you can use:
 window.plugins.orientationchanger.resetOrientation(); // Note that is the same as doing .lockOrientation('default')
 ```
 
-You can get the orientation the plugin is currently enforcing by calling:
+To get the currently enforced orientation:
 ```javascript
-window.plugins.orientationchanger.getOrientation();
+var currentOrientation = window.plugins.orientationchanger.getOrientation();
+if(currentOrientation == 'landscape') {
+  // Do something that only happens in landscape
+  // Note that .getOrientation() just returns 'default' and not the displayed orientation 
+  // if you haven't locked any orientation
+}
 ```
