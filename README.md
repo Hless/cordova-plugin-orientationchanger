@@ -20,7 +20,7 @@ After cordova and its plugins are loaded you can execute the following line of c
 ```javascript
 window.plugins.orientationchanger.lockOrientation('landscape');
 ```
-You can choose between `'portrait'`, `'landscape'` and `'default'`. 'default' being the orientation as configured in your config.xml. 
+You can choose between `'portrait'`, `'landscape'`, `'sensor'` and `'default'`. `'default'` being the orientation as configured in your config.xml. The `'sensor'` setting forces the orientation to be whatever orientation the device is in, regardless of your setting in config.xml. Note that some devices do not support all four orientations in sensor mode (for example some devices won't normally use 180 degree rotation). 
 
 If you want to revert back to default behaviour you can use:
 ```javascript
